@@ -9,6 +9,8 @@ namespace DAL
 {
     public class Questions
     {
+        public int userId;
+
         [Key]
         public int QuestionId { get; set; }
 

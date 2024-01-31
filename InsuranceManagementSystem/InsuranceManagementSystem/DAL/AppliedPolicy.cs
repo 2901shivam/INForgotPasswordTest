@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL
-
 {
-
     public enum PolicyStatus
     {
         Pending,
         Approved,
         Disapproved
     }
+
     public class AppliedPolicy
     {
         [Key]
@@ -35,6 +32,12 @@ namespace DAL
 
         // Navigation property to link AppliedPolicy with Customer
         public virtual Customer Customer { get; set; }
+
+        [Required(ErrorMessage = "Policy Type is required")]
+        public PolicyType PolicyType { get; set; }
+
+        public double Price { get; set; }
+
         public PolicyStatus StatusCode { get; set; } = PolicyStatus.Pending;
     }
 }

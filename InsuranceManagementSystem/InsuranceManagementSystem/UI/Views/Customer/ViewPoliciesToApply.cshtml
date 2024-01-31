@@ -1,9 +1,8 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "ViewPoliciesToApply";
 }
 
-﻿@model List<DAL.Policy>
+@model List<DAL.Policy>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +17,7 @@
         }
 
         h2 {
-            color: #007bff; 
+            color: #007bff;
         }
 
         table {
@@ -36,17 +35,17 @@
         }
 
         th {
-            background-color: #007bff; 
-            color: #fff; 
+            background-color: #007bff;
+            color: #fff;
         }
 
         tbody tr:hover {
-            background-color: #f0f8ff; 
+            background-color: #f0f8ff;
         }
 
         input[type="submit"] {
-            background-color: #007bff; 
-            color: #fff; 
+            background-color: #007bff;
+            color: #fff;
             padding: 8px 12px;
             border: none;
             border-radius: 4px;
@@ -54,10 +53,10 @@
         }
 
             input[type="submit"]:hover {
-                background-color: #0056b3; 
+                background-color: #0056b3;
             }
     </style>
-   
+
 </head>
 <body>
     <h2>List of Policies</h2>
@@ -68,6 +67,8 @@
             <th>Policy Number</th>
             <th>Applied Date</th>
             <th>Category</th>
+            <th>Policy Type</th>
+            <th>Price</th>
             <th>Action</th>
         </tr>
         @foreach (var policy in Model)
@@ -77,6 +78,8 @@
                 <td>@policy.PolicyNumber</td>
                 <td>@policy.AppliedDate.ToShortDateString()</td>
                 <td>@policy.Category</td>
+                <td>@policy.PolicyType</td>
+                <td>@policy.Price</td>
                 <td>
                     @using (Html.BeginForm("Apply", "Customer", FormMethod.Post))
                     {
@@ -89,4 +92,3 @@
     </table>
 </body>
 </html>
-

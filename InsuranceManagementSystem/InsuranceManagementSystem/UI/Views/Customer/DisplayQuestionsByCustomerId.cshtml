@@ -1,12 +1,9 @@
 ﻿
-
-﻿@model List<DAL.Questions>
-
-
+@model List<DAL.Questions>
 
 @{
     ViewBag.Title = "Questions for Customer ID: " + ViewBag.CustomerId;
-    Layout = "~/Views/Shared/_Layout.cshtml"; 
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Questions for Customer ID: @ViewBag.CustomerId</h2>
@@ -18,7 +15,6 @@
             <th>Question</th>
             <th>Date</th>
             <th>Answer</th>
-           
         </tr>
     </thead>
     <tbody>
@@ -29,7 +25,6 @@
                 <td>@question.Question</td>
                 <td>@question.Date.ToString("yyyy-MM-dd")</td>
                 <td>@question.Answer</td>
-             
             </tr>
         }
     </tbody>

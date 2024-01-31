@@ -100,7 +100,7 @@ namespace UILayer.Controllers
 
                 adminRepository.CreateAdmin(newadmin);
 
-                return RedirectToAction("Index", "Admin");
+                return RedirectToAction("AdminLogin","Validation");
             }
         }
 

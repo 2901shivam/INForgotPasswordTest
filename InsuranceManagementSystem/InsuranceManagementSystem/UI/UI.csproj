@@ -220,7 +220,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Policy\ShowAllPolicy.cshtml" />
     <Content Include="Views\Policy\AddPolicy.cshtml" />
     <Content Include="Views\Policy\AddPolicySuccess.cshtml" />
     <Content Include="Views\Policy\ShowAllPoliciesEdit.cshtml" />
@@ -230,25 +229,19 @@
     <Content Include="Views\Policy\DeletePolicy.cshtml" />
     <Content Include="Views\Policy\ConfirmDeletePolicy.cshtml" />
     <Content Include="Views\Policy\DeletePolicySuccess.cshtml" />
-    <Content Include="Views\Admin\AllAppliedPolicies.cshtml" />
     <Content Include="Views\Admin\ApprovedPolicies.cshtml" />
     <Content Include="Views\Admin\Categories.cshtml" />
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\Admin\DisapprovedPolicies.cshtml" />
     <Content Include="Views\Admin\PendingPolicies.cshtml" />
-    <Content Include="Views\Admin\PoliciesList.cshtml" />
     <Content Include="Views\Admin\Policy.cshtml" />
     <Content Include="Views\Admin\Question.cshtml" />
     <Content Include="Views\Admin\Reply.cshtml" />
     <Content Include="Views\Customer\AppliedPolicies.cshtml" />
-    <Content Include="Views\Customer\AskCustomerId.cshtml" />
-    <Content Include="Views\Customer\AskQuestion.cshtml" />
     <Content Include="Views\Customer\Categories.cshtml" />
     <Content Include="Views\Customer\Dashboard.cshtml" />
-    <Content Include="Views\Customer\DisplayQuestionsByCustomerId.cshtml" />
     <Content Include="Views\Customer\GetAllCustomers.cshtml" />
     <Content Include="Views\Customer\Success.cshtml" />
-    <Content Include="Views\Customer\ViewPoliciesToApply.cshtml" />
     <Content Include="Views\Validation\AdminLogin.cshtml" />
     <Content Include="Views\Validation\AdminResetPassword.cshtml" />
     <Content Include="Views\Validation\CustomerLogin.cshtml" />
@@ -259,6 +252,12 @@
     <Content Include="Views\Validation\ResetPassword.cshtml" />
     <Content Include="Views\Shared\AdminLayout.cshtml" />
     <Content Include="Views\Shared\CustomerLayout.cshtml" />
+    <Content Include="Views\Policy\ShowAllPolicy.cshtml" />
+    <Content Include="Views\Customer\ViewPoliciesToApply.cshtml" />
+    <Content Include="Views\Admin\PoliciesList.cshtml" />
+    <Content Include="Views\Admin\AllAppliedPolicies.cshtml" />
+    <Content Include="Views\Customer\AskCustomerId.cshtml" />
+    <Content Include="Views\Customer\DisplayQuestionsByCustomerId.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

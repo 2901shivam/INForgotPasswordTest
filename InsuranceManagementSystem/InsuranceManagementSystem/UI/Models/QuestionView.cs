@@ -29,7 +29,7 @@ namespace UI.Models
 
         //
 
-        [Required(ErrorMessage = "Customer Id is required.")]
+        //[Required(ErrorMessage = "Customer Id is required.")]
         public int CustomerId { get; set; }
     }
 }

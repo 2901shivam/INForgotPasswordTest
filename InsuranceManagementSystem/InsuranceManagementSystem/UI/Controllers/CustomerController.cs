@@ -86,36 +86,82 @@ namespace UI.Controllers
             var categories = dbContext.Categories.ToList();
             return View(categories);
         }
-        public ActionResult AskQuestion()   
+        //public ActionResult AskQuestion()   
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+
+        //public ActionResult AskQuestion(QuestionView questionview)
+        //{
+        //    var userId = Session["UserId"] as int?;
+
+        //    if (!userId.HasValue)
+        //    {
+        //        // Handle the case where userId is null (optional)
+        //        // For example, you might want to redirect to a login page or throw an exception
+        //        return RedirectToAction("Login"); // Replace "Login" with the appropriate action/method
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        Questions newQuestion = new Questions
+        //        {
+        //            Question = questionview.Question,
+        //            Date = questionview.Date,
+        //            Answer = questionview.Answer,
+        //            CustomerId = userId.Value
+        //        };
+
+        //        dbContext.Questions.Add(newQuestion);
+        //        dbContext.SaveChanges();
+
+        //        return RedirectToAction("Success");
+        //    }
+
+        //    return View(questionview);
+        //}
+
+        public ActionResult AskQuestion()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AskQuestion(QuestionView questionview)    
-
+        public ActionResult AskQuestion(QuestionView questionview)
         {
+            var userId = Session["UserId"] as int?;
+
+            if (!userId.HasValue)
+            {
+                // Handle the case where userId is null (optional)
+                // For example, you might want to redirect to a login page or throw an exception
+                return RedirectToAction("Login"); // Replace "Login" with the appropriate action/method
+            }
+
             if (ModelState.IsValid)
             {
-               
                 Questions newQuestion = new Questions
                 {
                     Question = questionview.Question,
                     Date = questionview.Date,
                     Answer = questionview.Answer,
-                    CustomerId = questionview.CustomerId
+                    CustomerId = userId.Value
                 };
 
                 dbContext.Questions.Add(newQuestion);
                 dbContext.SaveChanges();
 
-               
-                return RedirectToAction("Success");
+                // Redirect to the action that displays questions based on the user's session ID
+                return RedirectToAction("DisplayQuestionsByCustomerId", new { customerId = userId.Value });
             }
 
-          
             return View(questionview);
         }
+
+
         public ActionResult Success() 
         {
             return View();
@@ -134,18 +180,27 @@ namespace UI.Controllers
         }
         
         [HttpPost]
-        public ActionResult DisplayQuestionsByCustomerId(int? customerId)  
+        public ActionResult DisplayQuestionsByCustomerId(int? customerId)
         {
-           
-            if (!customerId.HasValue)
+            var userId = Session["UserId"] as int?;
+
+            if (!userId.HasValue)
             {
-                
+                // Handle the case where userId is null (optional)
+                // For example, you might want to redirect to a login page or throw an exception
+                return RedirectToAction("Login"); // Replace "Login" with the appropriate action/method
+            }
+
+            if (!customerId.HasValue || customerId.Value != userId.Value)
+            {
+                // Ensure that the requested customer ID matches the session user ID
                 return RedirectToAction("Error");
             }
-           
+
             var questions = dbContext.Questions.Where(q => q.CustomerId == customerId.Value).ToList();
             ViewBag.CustomerId = customerId.Value;
             return View(questions);
         }
+
     }
 }

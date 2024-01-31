@@ -117,9 +117,13 @@
     <Compile Include="Data\AdminRepository.cs" />
     <Compile Include="Data\CustomerRepository.cs" />
     <Compile Include="InsuranceDbContext.cs" />
-    <Compile Include="Migrations\202401260849353_firstMigration.cs" />
-    <Compile Include="Migrations\202401260849353_firstMigration.designer.cs">
-      <DependentUpon>202401260849353_firstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202401301520315_First-Mig1.cs" />
+    <Compile Include="Migrations\202401301520315_First-Mig1.designer.cs">
+      <DependentUpon>202401301520315_First-Mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401301822006_Second-Mig.cs" />
+    <Compile Include="Migrations\202401301822006_Second-Mig.designer.cs">
+      <DependentUpon>202401301822006_Second-Mig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Policy.cs" />
@@ -135,8 +139,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401260849353_firstMigration.resx">
-      <DependentUpon>202401260849353_firstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401301520315_First-Mig1.resx">
+      <DependentUpon>202401301520315_First-Mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401301822006_Second-Mig.resx">
+      <DependentUpon>202401301822006_Second-Mig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

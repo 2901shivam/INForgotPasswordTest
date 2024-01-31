@@ -145,9 +145,10 @@ C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagem
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\bin\Debug\System.ValueTuple.xml
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.Migrations.firstMigration.resources
-C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.dll
 C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.pdb
+C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.Migrations.FirstMig1.resources
+C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\shiva\OneDrive\Desktop\RLL-3\InsuranceManagementSystem\InsuranceManagementSystem\DAL\obj\Debug\DAL.Migrations.SecondMig.resources
